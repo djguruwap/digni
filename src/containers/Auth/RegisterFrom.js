@@ -224,7 +224,9 @@ export const RegisterFrom = () => {
           />
           <Text style={styles.alreadyHaveAcc}>
             Already have an account?{' '}
-            <Text onPress={login} style={{color: COLORS.PRIMARY}}>
+            <Text
+              onPress={() => navigation.navigate('Login')}
+              style={{color: COLORS.PRIMARY}}>
               Sign In
             </Text>
           </Text>

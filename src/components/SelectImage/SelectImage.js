@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     height: SCREEN.HEIGHT * 0.055,
     width: '100%',
     backgroundColor: 'rgba(0,0,0,0.5)',
-    marginTop: -45,
+    marginTop: -SCREEN.WIDTH * 0.12,
     borderBottomEndRadius: 75,
     borderBottomStartRadius: 75,
   },

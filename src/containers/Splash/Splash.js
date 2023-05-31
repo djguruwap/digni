@@ -3,12 +3,14 @@ import React, {useEffect} from 'react';
 import {View, Text, StyleSheet, StatusBar} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {COLORS, FONT_FAMILY, FONT_SIZE} from '../../Utils/Metrics';
+import LinearGradient from 'react-native-linear-gradient';
 
 export const SplashScreen = () => {
   const navigation = useNavigation();
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigation.replace('Register');
+      // navigation.replace('Login');
+      navigation.replace('OnBoarding');
     }, 2500);
 
     return () => {
@@ -19,9 +21,11 @@ export const SplashScreen = () => {
   return (
     <>
       <StatusBar translucent backgroundColor="transparent" />
-      <View style={styles.container}>
-        <Text style={styles.title}>Digni</Text>
-      </View>
+      <LinearGradient
+        colors={['#3AA7FD', '#9BD3FF', '#3AA7FD']}
+        style={styles.container}>
+        <Text style={styles.title}>Icebreakerz</Text>
+      </LinearGradient>
     </>
   );
 };

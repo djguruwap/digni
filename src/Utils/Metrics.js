@@ -25,7 +25,7 @@ export const HEIGHT = {
 };
 
 export const COLORS = {
-  PRIMARY: '#3aa7fd',
+  PRIMARY: '#3AA7FD',
   SECENDARY: '#7EC8E3',
   CARD_CYAN: '#f3faff',
   CARD_CYAN_DEEP: '#d8edff',
@@ -78,7 +78,7 @@ export const WINDOW = {
 export const PADDING = {
   SMALL: 5,
   MEDIUM: 10,
-  LARGE: 14,
+  LARGE: 18,
 };
 
 export const APP_TYPE = Platform.OS === 'ios' ? 'IOS' : 'ANDROID';

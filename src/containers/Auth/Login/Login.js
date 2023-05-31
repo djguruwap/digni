@@ -1,32 +1,27 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, StatusBar} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import {BackButton} from '../../components/Button/BackButton';
-import SelectImage from '../../components/SelectImage/SelectImage';
 import {
   COLORS,
   FONT_FAMILY,
   FONT_SIZE,
   PADDING,
   SCREEN,
-} from '../../Utils/Metrics';
-import {RegisterFrom} from './RegisterFrom';
+} from '../../../Utils/Metrics';
+import {LoginFrom} from './LoginFrom';
 
-const Register = () => {
+const Login = () => {
   return (
     <>
+      <StatusBar translucent backgroundColor={'rgba(255, 255, 255,0.1)'} />
       <LinearGradient colors={['#C2E4FF', '#FFFDFD']} style={styles.box} />
       <View style={styles.container}>
-        <BackButton ml={0} />
         <Text style={styles.title}>
-          <Text style={{color: COLORS.BLACK}}>Start</Text> your {'\n'} journey
-          with us.
+          <Text style={{color: COLORS.BLACK}}>Hello</Text> Again! {'\n'} Welcome
+          Back
         </Text>
-        <View>
-          <SelectImage />
-        </View>
-        <View>
-          <RegisterFrom />
+        <View style={styles.mt}>
+          <LoginFrom />
         </View>
       </View>
     </>
@@ -49,6 +44,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     alignSelf: 'center',
   },
+  mt: {
+    marginTop: SCREEN.WIDTH * 0.1,
+  },
 });
 
-export default Register;
+export default Login;
